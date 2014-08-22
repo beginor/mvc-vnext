@@ -7,7 +7,7 @@
         "Nowin.vNext": ""
     },
     "commands": {
-        "web-nowin": "Microsoft.AspNet.Hosting --server Nowin --server.urls http://localhost:5000",
+        "web-nowin": "Microsoft.AspNet.Hosting --server Nowin.vNext --server.urls http://localhost:5000",
         "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
     }
 }
