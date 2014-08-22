@@ -10,5 +10,9 @@ namespace MvcApp.Controllers {
         public IActionResult Index() {
             return View();
         }
+
+        public IActionResult Test(int id) {
+            return Content(id.ToString());
+        }
     }
 }
