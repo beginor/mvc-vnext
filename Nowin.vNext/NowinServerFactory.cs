@@ -18,11 +18,27 @@ namespace Nowin.vNext {
         }
 
         public IServerInformation Initialize(IConfiguration configuration) {
-            // TODO: Parse config
-            Console.WriteLine(configuration.ToString());
+            // simple Parse config
+            var server = configuration.Get("server");
+            var serverUrls = configuration.Get("server.urls");
+            Console.WriteLine("Owin server is: {0}, listening at {1}", server, serverUrls);
+
+            var uri = new Uri(serverUrls, UriKind.Absolute);
+            IPAddress ip;
+            if (!IPAddress.TryParse(uri.Host, out ip)) {
+                if (uri.Host.Equals("localhost", StringComparison.OrdinalIgnoreCase)) {
+                    ip = IPAddress.Parse("127.0.0.1");
+                }
+                else {
+                    ip = IPAddress.Any;
+                }
+            }
+
+            var port = uri.Port;
+
             var builder = ServerBuilder.New()
-                                       .SetAddress(IPAddress.Any)
-                                       .SetPort(5000)
+                                       .SetAddress(ip)
+                                       .SetPort(port)
                                        .SetOwinApp(OwinWebSocketAcceptAdapter.AdaptWebSockets(HandleRequest));
 
             return new NowinServerInformation(builder);
