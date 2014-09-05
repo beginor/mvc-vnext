@@ -1,0 +1,25 @@
+<header class="top" role="header">
+    <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application Home", "Index", "Home", new { area = ""}, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav nav">
+                    <li>@Html.ActionLink("Home", "Index")</li>
+                    <li>@Html.ActionLink("About", "About")</li>
+                    <li>@Html.ActionLink("Contact", "Contact")</li>
+                </ul>
+                <div class="navbar-right">
+                    @Html.ActionLink("Login", "Login", "Account")
+                </div>
+            </nav>
+        </nav>
+    </div>
+</header>

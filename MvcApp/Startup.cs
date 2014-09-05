@@ -13,11 +13,10 @@ namespace MvcApp {
                 services.AddMvc();
             });
 
+            app.UseStaticFiles();
+
             app.UseMvc(routes => {
-                routes.MapRoute(
-                    name: "default-api",
-                    template: "api/{controller}/{id?}"
-                );
+                
                 routes.MapRoute(
                     name: "default",
                     template: "{controller}/{action}/{id?}",
@@ -26,6 +25,11 @@ namespace MvcApp {
                         action = "Index"
                     }
                 );
+                
+                routes.MapRoute(
+                    name: "api",
+                    template: "api/{controller}/{id?}"
+                );             
             });
         }
     }

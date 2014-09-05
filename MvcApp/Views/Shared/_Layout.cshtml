@@ -1,11 +1,28 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+@await Html.PartialAsync("_HeaderPartial")
+
+<div class="middle">
+    <div class="container">
     @RenderBody()
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+    <p>&copy; @DateTime.Today.Year - My ASP.NET Application
+    </div>
+</footer>
+<script src="~/resources/bootstrap/js/jquery-2.1.1.min.js"></script>
+<script src="~/resources/bootstrap/js/bootstrap.js"></script>
+@RenderSection("scripts", required: false)
 </body>
 </html>

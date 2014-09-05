@@ -11,8 +11,14 @@ namespace MvcApp.Controllers {
             return View();
         }
 
-        public IActionResult Test(int id) {
-            return Content(id.ToString());
+        public IActionResult About() {
+            ViewBag.Message = "Your application description page.";
+            return View();
+        }
+
+        public IActionResult Contact() {
+            ViewBag.Message = "Your contact page.";
+            return View();
         }
     }
 }
