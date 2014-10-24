@@ -8,7 +8,7 @@ namespace MvcApp {
 
     public class Startup {
 
-        public void Configure(IBuilder app) {
+        public void Configure(IApplicationBuilder app) {
             app.UseServices(services => {
                 services.AddMvc();
             });
@@ -16,7 +16,7 @@ namespace MvcApp {
             app.UseStaticFiles();
 
             app.UseMvc(routes => {
-                
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller}/{action}/{id?}",
@@ -25,11 +25,11 @@ namespace MvcApp {
                         action = "Index"
                     }
                 );
-                
+
                 routes.MapRoute(
                     name: "api",
                     template: "api/{controller}/{id?}"
-                );             
+                );
             });
         }
     }
