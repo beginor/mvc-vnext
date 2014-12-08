@@ -11,10 +11,10 @@ namespace Nowin.vNext {
 
     public class NowinServerFactory : IServerFactory {
 
-        private Func<object, Task> _callback;
+        private Func<object, Task> callback;
 
         private Task HandleRequest(IDictionary<string, object> env) {
-            return _callback(new OwinFeatureCollection(env));
+            return callback(new OwinFeatureCollection(env));
         }
 
         public IServerInformation Initialize(IConfiguration configuration) {
@@ -46,7 +46,7 @@ namespace Nowin.vNext {
 
         public IDisposable Start(IServerInformation serverInformation, Func<object, Task> application) {
             var information = (NowinServerInformation)serverInformation;
-            _callback = application;
+            callback = application;
             INowinServer server = information.Builder.Build();
             server.Start();
             return server;
@@ -60,11 +60,7 @@ namespace Nowin.vNext {
 
             public ServerBuilder Builder { get; private set; }
 
-            public string Name {
-                get {
-                    return "Nowin";
-                }
-            }
+            public string Name => "Nowin";
         }
     }
 }
