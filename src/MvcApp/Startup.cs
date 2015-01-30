@@ -22,7 +22,7 @@ namespace MvcApp {
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
             //loggerfactory.AddConsole();
-            app.UseErrorPage(ErrorPageOptions.ShowAll);
+            //app.UseErrorPage(ErrorPageOptions.ShowAll);
             app.UseStaticFiles();
 
             app.UseServices(services => {

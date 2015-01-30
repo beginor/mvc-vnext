@@ -1,4 +1,5 @@
 {
+    "version": "0.0.1",
     "dependencies": {
         "Microsoft.AspNet.Owin": "1.0.0.0-beta4-10838",
         "Microsoft.AspNet.Hosting": "1.0.0.0-beta4-10995",
