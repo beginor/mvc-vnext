@@ -20,9 +20,14 @@ namespace MvcApp {
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerfactory) {
-            loggerfactory.AddConsole();
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
+            //loggerfactory.AddConsole();
+            app.UseErrorPage(ErrorPageOptions.ShowAll);
             app.UseStaticFiles();
+
+            app.UseServices(services => {
+                services.AddMvc();
+            });
 
             app.UseMvc(routes => {
                 //
