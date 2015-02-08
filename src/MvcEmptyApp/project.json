@@ -1,0 +1,29 @@
+﻿{
+    "webroot": "wwwroot",
+    "version": "1.0.0-*",
+    "exclude": [
+        "wwwroot"
+    ],
+    "packExclude": [
+        "node_modules",
+        "bower_components",
+        "**.kproj",
+        "**.user",
+        "**.vspscc"
+    ],
+    "dependencies": {
+        "Microsoft.AspNet.Hosting": "1.0.0-beta2",
+        "Microsoft.AspNet.Mvc": "6.0.0-beta2",
+        "Microsoft.AspNet.Server.IIS": "1.0.0-beta2",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta2",
+        "Microsoft.Framework.DependencyInjection": "1.0.0-beta2",
+        "Nowin.vNext": ""
+    },
+    "commands": {
+        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:8080",
+        "web-nowin": "Microsoft.AspNet.Hosting --server Nowin.vNext --server.urls http://localhost:8080"
+    },
+    "frameworks" : {
+        "aspnet50" : { }
+    }
+}
