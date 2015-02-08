@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Mvc;
+using System;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,7 +9,7 @@ namespace MvcApp.Controllers {
 
         // GET: /<controller>/
         public IActionResult Index() {
-            return View();
+            return Content("Hello, ASP.NET Mvc under " + Environment.OSVersion.ToString());
         }
 
         public IActionResult About() {

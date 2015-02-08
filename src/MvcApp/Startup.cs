@@ -23,28 +23,13 @@ namespace MvcApp {
         public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
             //loggerfactory.AddConsole();
             //app.UseErrorPage(ErrorPageOptions.ShowAll);
-            app.UseStaticFiles();
+            //app.UseStaticFiles();
 
-            app.UseServices(services => {
-                services.AddMvc();
-            });
-
-            app.UseMvc(routes => {
-                //
-                routes.MapRoute(
-                    name: "api",
-                    template: "api/{controller}/{id?}"
+            app.UseMvc(routeBuilder => {
+                routeBuilder.MapRoute(
+                    name: "Default",
+                    template: "{controller=Home}/{action=Index}/{id?}"
                 );
-                //
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller}/{action}/{id?}",
-                    defaults: new {
-                        controller = "Home",
-                        action = "Index"
-                    }
-                );
-
             });
         }
     }
