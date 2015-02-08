@@ -21,7 +21,7 @@
     },
     "commands": {
         "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:8080",
-        "web-nowin": "Microsoft.AspNet.Hosting --server Nowin.vNext --server.urls http://localhost:8080"
+        "nowin": "Microsoft.AspNet.Hosting --server Nowin.vNext --server.urls http://localhost:8080"
     },
     "frameworks" : {
         "aspnet50" : { }
