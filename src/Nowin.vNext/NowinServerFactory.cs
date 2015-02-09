@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNet.Hosting.Server;
-using System;
-using Microsoft.AspNet.Builder;
-using Microsoft.Framework.ConfigurationModel;
-using System.Threading.Tasks;
-using System.Net;
-using Microsoft.AspNet.Owin;
+﻿using System;
 using System.Collections.Generic;
+using System.Net;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.Hosting.Server;
+using Microsoft.AspNet.Owin;
+using Microsoft.Framework.ConfigurationModel;
 
 namespace Nowin.vNext {
 
@@ -33,7 +33,7 @@ namespace Nowin.vNext {
                 }
             }
             var port = uri.Port;
-            
+
             // build nowin server;
             var builder = ServerBuilder.New()
                 .SetAddress(ip)
