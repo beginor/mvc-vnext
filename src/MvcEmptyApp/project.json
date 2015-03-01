@@ -12,11 +12,11 @@
         "**.vspscc"
     ],
     "dependencies": {
-        "Microsoft.AspNet.Hosting": "1.0.0-beta2",
-        "Microsoft.AspNet.Mvc": "6.0.0-beta2",
-        "Microsoft.AspNet.Server.IIS": "1.0.0-beta2",
-        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta2",
-        "Microsoft.Framework.DependencyInjection": "1.0.0-beta2",
+        "Microsoft.AspNet.Hosting": "1.0.0-beta3",
+        "Microsoft.AspNet.Mvc": "6.0.0-beta3",
+        "Microsoft.AspNet.Server.IIS": "1.0.0-beta3",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta3",
+        "Microsoft.Framework.DependencyInjection": "1.0.0-beta3",
         "Nowin.vNext": ""
     },
     "commands": {
