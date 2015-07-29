@@ -3,6 +3,7 @@
 *.suo
 *.user
 *.ide
+*.lock.json
 *.userprefs
 *.DS_Store
 .vs

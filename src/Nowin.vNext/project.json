@@ -1,15 +1,9 @@
 ﻿{
     "version": "1.0.0-*",
     "dependencies": {
-        "Microsoft.AspNet.Hosting": "1.0.0-beta3",
-        "Microsoft.AspNet.Owin": "1.0.0-beta3",
-        "Nowin": "0.13.6.0"
-    },
-
-    "frameworks" : {
-        "aspnet50" : { 
-            "dependencies": {
-            }
-        }
+        "Microsoft.AspNet.Hosting": "1.0.0-beta6",
+        "Microsoft.AspNet.Owin": "1.0.0-beta6",
+        "Microsoft.Framework.DependencyInjection": "1.0.0-beta6",
+        "Nowin": "0.17.1"
     }
 }
