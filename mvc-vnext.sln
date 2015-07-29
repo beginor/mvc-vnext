@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22512.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Nowin.vNext", "src\Nowin.vNext\Nowin.vNext.kproj", "{7516BDEE-24A1-47BC-A5BC-4972A1D8568F}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Nowin.vNext", "src\Nowin.vNext\Nowin.vNext.xproj", "{7516BDEE-24A1-47BC-A5BC-4972A1D8568F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{734792F5-0CFC-416E-975A-D4E7A0746768}"
 EndProject
@@ -16,9 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Projects_2mvc-vnext_2global_1json__JSONSchema = http://json.schemastore.org/global
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MvcEmptyApp", "src\MvcEmptyApp\MvcEmptyApp.kproj", "{2C98915C-5314-4844-87F8-0454E92338ED}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MvcEmptyApp", "src\MvcEmptyApp\MvcEmptyApp.xproj", "{2C98915C-5314-4844-87F8-0454E92338ED}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MvcStarter", "src\MvcStarter\MvcStarter.kproj", "{48A13FFC-C1AC-4A18-9D09-5D336902DC20}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MvcStarter", "src\MvcStarter\MvcStarter.xproj", "{48A13FFC-C1AC-4A18-9D09-5D336902DC20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
