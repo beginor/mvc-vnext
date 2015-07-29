@@ -5,5 +5,8 @@
         "Microsoft.AspNet.Owin": "1.0.0-beta6",
         "Microsoft.Framework.DependencyInjection": "1.0.0-beta6",
         "Nowin": "0.17.1"
+    },
+    "frameworks": {
+        "dnx451": { }
     }
 }

@@ -21,5 +21,8 @@
     "commands": {
         "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:8080",
         "nowin": "Microsoft.AspNet.Hosting --server Nowin.vNext --server.urls http://localhost:8080"
+    },
+    "frameworks": {
+        "dnx451": { }
     }
 }
