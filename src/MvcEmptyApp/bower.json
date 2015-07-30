@@ -1,0 +1,7 @@
+{
+  "name": "Mvc Empty App",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "3.3.5"
+  }
+}
