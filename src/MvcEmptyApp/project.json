@@ -1,16 +1,7 @@
 ﻿{
     "webroot": "wwwroot",
     "version": "1.0.0-*",
-    "exclude": [
-        "wwwroot"
-    ],
-    "packExclude": [
-        "node_modules",
-        "bower_components",
-        "**.kproj",
-        "**.user",
-        "**.vspscc"
-    ],
+
     "dependencies": {
         "Kestrel": "1.0.0-beta6",
         "Microsoft.AspNet.Diagnostics": "1.0.0-beta6",
@@ -18,11 +9,27 @@
         "Microsoft.Framework.Logging.Console": "1.0.0-beta6",
         "Nowin.vNext": ""
     },
+
     "commands": {
-        "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:8080",
-        "nowin": "Microsoft.AspNet.Hosting --server Nowin.vNext --server.urls http://localhost:8080"
+        "web": "Microsoft.AspNet.Hosting --config hosting-web.ini",
+        "kestrel": "Microsoft.AspNet.Hosting --config hosting-kestrel.ini",
+        "nowin": "Microsoft.AspNet.Hosting --config hosting-nowin.ini"
     },
-    "frameworks": {
-        "dnx451": { }
-    }
+
+  "frameworks": {
+    "dnx451": { }
+  },
+
+  "publishExclude": [
+    "node_modules",
+    "bower_components",
+    "**.xproj",
+    "**.user",
+    "**.vspscc"
+  ],
+  "exclude": [
+    "wwwroot",
+    "node_modules",
+    "bower_components"
+  ]
 }
