@@ -1,8 +1,4 @@
-﻿using System;
-using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Hosting.Server;
-using Nowin;
-
+﻿using Microsoft.AspNet.Hosting.Server;
 
 namespace Nowin.vNext {
 

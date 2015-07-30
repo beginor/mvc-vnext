@@ -1,12 +1,19 @@
 ﻿{
-    "version": "1.0.0-*",
-    "dependencies": {
-        "Microsoft.AspNet.Hosting": "1.0.0-beta6",
-        "Microsoft.AspNet.Owin": "1.0.0-beta6",
-        "Microsoft.Framework.DependencyInjection": "1.0.0-beta6",
-        "Nowin": "0.17.1"
-    },
-    "frameworks": {
-        "dnx451": { }
-    }
+  "version": "1.0.0-*",
+  "description": "Nowin.vNext Class Library",
+  "authors": [ "beginor" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "dependencies": {
+    "Nowin": "0.17.1",
+    "Microsoft.AspNet.Hosting": "1.0.0-beta6",
+    "Microsoft.Framework.DependencyInjection": "1.0.0-beta6",
+    "Microsoft.AspNet.Owin": "1.0.0-beta6"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
 }
