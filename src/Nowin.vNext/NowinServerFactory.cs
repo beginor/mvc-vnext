@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.FeatureModel;
 using Microsoft.AspNet.Hosting.Server;
 using Microsoft.AspNet.Owin;
-using Microsoft.Framework.ConfigurationModel;
+using Microsoft.Framework.Configuration;
 
 namespace Nowin.vNext {
 
     public class NowinServerFactory : IServerFactory {
 
-        private Func<object, Task> callback;
+        private Func<IFeatureCollection, Task> callback;
 
         IServerInformation IServerFactory.Initialize(IConfiguration configuration) {
             // adapt aspnet to owin app;
@@ -48,7 +48,7 @@ namespace Nowin.vNext {
             return callback(new OwinFeatureCollection(env));
         }
 
-        IDisposable IServerFactory.Start(IServerInformation serverInformation, Func<object, Task> application) {
+        IDisposable IServerFactory.Start(IServerInformation serverInformation, Func<IFeatureCollection, Task> application) {
             var info = (NowinServerInformation)serverInformation;
             var server = info.Builder.Build();
             callback = application;
