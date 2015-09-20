@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Routing;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.AspNet.Hosting;
 
@@ -12,6 +11,7 @@ namespace MvcApp {
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
+            
             app.UseMvc(routeBuilder => {
                 routeBuilder.MapRoute(
                     name: "Default",
