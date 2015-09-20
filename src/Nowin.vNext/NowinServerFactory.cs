@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using Microsoft.AspNet.FeatureModel;
+using Microsoft.AspNet.Http.Features;
 using Microsoft.AspNet.Hosting.Server;
 using Microsoft.AspNet.Owin;
 using Microsoft.Framework.Configuration;
@@ -18,8 +18,8 @@ namespace Nowin.vNext {
             var owinApp = OwinWebSocketAcceptAdapter.AdaptWebSockets(HandleRequest);
 
             // Get server info, write to console.
-            var server = configuration.Get("server");
-            var serverUrls = configuration.Get("server.urls");
+            var server = configuration["server"];
+            var serverUrls = configuration["server.urls"];
             Console.WriteLine("Owin server is: {0}, listening at {1}", server, serverUrls);
             // parse ip address and port.
             var uri = new Uri(serverUrls, UriKind.Absolute);
