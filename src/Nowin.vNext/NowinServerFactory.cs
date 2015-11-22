@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Http.Features;
 using Microsoft.AspNet.Hosting.Server;
 using Microsoft.AspNet.Owin;
-using Microsoft.Framework.Configuration;
+using Microsoft.Extensions.Configuration;
 
 namespace Nowin.vNext {
 
@@ -13,7 +13,7 @@ namespace Nowin.vNext {
 
         private Func<IFeatureCollection, Task> callback;
 
-        IServerInformation IServerFactory.Initialize(IConfiguration configuration) {
+        IFeatureCollection IServerFactory.Initialize(IConfiguration configuration) {
             // adapt aspnet to owin app;
             var owinApp = OwinWebSocketAcceptAdapter.AdaptWebSockets(HandleRequest);
 
@@ -41,6 +41,8 @@ namespace Nowin.vNext {
                 .SetOwinApp(owinApp);
 
             var serverInfo = new NowinServerInformation(builder);
+            var rev = serverInfo.Revision;
+            
             return serverInfo;
         }
 
@@ -48,7 +50,7 @@ namespace Nowin.vNext {
             return callback(new OwinFeatureCollection(env));
         }
 
-        IDisposable IServerFactory.Start(IServerInformation serverInformation, Func<IFeatureCollection, Task> application) {
+        IDisposable IServerFactory.Start(IFeatureCollection serverInformation, Func<IFeatureCollection, Task> application) {
             var info = (NowinServerInformation)serverInformation;
             var server = info.Builder.Build();
             callback = application;

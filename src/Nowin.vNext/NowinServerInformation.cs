@@ -1,12 +1,10 @@
-﻿using Microsoft.AspNet.Hosting.Server;
+﻿using Microsoft.AspNet.Http.Features;
 
 namespace Nowin.vNext {
 
-    public class NowinServerInformation : IServerInformation {
+    public class NowinServerInformation : FeatureCollection {
 
         public ServerBuilder Builder { get; }
-
-        string IServerInformation.Name => "Nowin";
 
         public NowinServerInformation(ServerBuilder builder) {
             Builder = builder;
