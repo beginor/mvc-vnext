@@ -15,8 +15,8 @@
     },
 
     "commands": {
-        "web": "Microsoft.AspNet.Server.Kestrel",
-        "nowin": "Nowin.vNext"
+        "kestrel": "Microsoft.AspNet.Hosting --config hosting-kestrel.json",
+        "nowin": "Microsoft.AspNet.Hosting --config hosting-kestrel.json"
     },
 
   "frameworks": {
