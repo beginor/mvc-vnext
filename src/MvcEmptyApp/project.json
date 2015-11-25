@@ -16,7 +16,7 @@
 
     "commands": {
         "kestrel": "Microsoft.AspNet.Hosting --config hosting-kestrel.json",
-        "nowin": "Microsoft.AspNet.Hosting --config hosting-kestrel.json"
+        "nowin": "Microsoft.AspNet.Hosting --config hosting-nowin.json"
     },
 
   "frameworks": {
