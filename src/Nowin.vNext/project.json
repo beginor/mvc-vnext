@@ -7,7 +7,7 @@
   "licenseUrl": "",
 
   "dependencies": {
-    "Nowin": "0.21.0",
+    "Nowin": "0.22.0",
     "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
     "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-final",
     "Microsoft.AspNet.Owin": "1.0.0-rc1-final"
